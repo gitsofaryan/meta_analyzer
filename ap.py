@@ -221,7 +221,7 @@ if st.button("Analyze"):
             st.subheader("Good vs Bad Points")
             bar_graph_data = generate_bar_graph(good_counts, bad_counts)
             if bar_graph_data:
-                st.image(f"data:image/png;base64,{bar_graph_data}", use_container_width=True)
+                st.image(f"data:image/png;base64,{bar_graph_data}", use_column_width=True)
             else:
                 st.warning("Could not generate bar chart.")
 
@@ -232,7 +232,7 @@ if st.button("Analyze"):
                 st.subheader("Keyword Word Cloud")
                 wordcloud_data = generate_wordcloud(keywords)
                 if wordcloud_data:
-                    st.image(f"data:image/png;base64,{wordcloud_data}", use_container_width=True)
+                    st.image(f"data:image/png;base64,{wordcloud_data}", use_column_width=True)
                 else:
                     st.warning("No valid keywords for word cloud.")
             else:
